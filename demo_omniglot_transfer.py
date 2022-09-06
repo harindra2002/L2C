@@ -14,7 +14,7 @@ config = parser.parse_args()
 
 print('STEP1: Train SPN on Omniglot background set')
 if not os.path.isfile('outputs/Omniglot_VGGS_DPS.model.pth'):
-    argv = '--loss DPS --dataset Omniglot --model_type vgg --model_name VGGS --schedule 30 40 --epochs 50'.split(' ')
+    argv = '--gpuid -1 --loss DPS --dataset Omniglot --model_type vgg --model_name VGGS --schedule 30 40 --epochs 50'.split(' ')
     run(get_args(argv))
 print('STEP1: Done')
 
